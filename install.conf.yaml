@@ -1,0 +1,6 @@
+# Installation script for dotbot
+- default:
+    link:
+      relink: true
+- link:
+    ~/.vimrc:
