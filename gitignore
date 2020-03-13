@@ -1,0 +1,4 @@
+# Global ignore file
+
+# Vim recovery files
+.*.swp

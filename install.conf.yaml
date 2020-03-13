@@ -4,3 +4,4 @@
       relink: true
 - link:
     ~/.vimrc:
+    ~/.gitignore:
