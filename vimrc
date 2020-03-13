@@ -37,8 +37,14 @@ set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
 
+let mapleader = " "
+
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-j> <C-w><C-j>
+
+
+" Fugitive
+nnoremap <leader>gs :Gstatus<CR>
