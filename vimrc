@@ -39,6 +39,7 @@ set hidden		" Hide buffers when they are abandoned
 
 let mapleader = " "
 
+" Navigation between windows
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
