@@ -1,5 +1,5 @@
 # Installation script for dotbot
-- default:
+- defaults:
     link:
       relink: true
       create: true
