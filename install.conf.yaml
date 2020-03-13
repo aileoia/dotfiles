@@ -7,4 +7,5 @@
     ~/.antigen:
     ~/.vimrc:
     ~/.gitignore:
+    ~/.vim/autoload/plug.vim: vim-plug/plug.vim
     ~/.zshrc:
