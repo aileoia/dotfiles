@@ -1,4 +1,3 @@
-# Installation script for dotbot
 - defaults:
     link:
       relink: true
