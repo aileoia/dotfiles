@@ -4,8 +4,8 @@
       relink: true
       create: true
 - link:
-    ~/.antigen:
+    ~/.antigen: submodules/antigen
     ~/.vimrc:
     ~/.gitignore:
-    ~/.vim/autoload/plug.vim: vim-plug/plug.vim
+    ~/.vim/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.zshrc:

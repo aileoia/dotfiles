@@ -2,8 +2,8 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 [submodule "antigen"]
-	path = antigen
+	path = submodules/antigen
 	url = https://github.com/zsh-users/antigen.git
 [submodule "vim-plug"]
-	path = vim-plug
+	path = submodules/vim-plug
 	url = https://github.com/junegunn/vim-plug
