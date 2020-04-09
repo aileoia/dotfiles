@@ -1,5 +1,6 @@
 call plug#begin()
 
+Plug 'ervandew/supertab'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 
