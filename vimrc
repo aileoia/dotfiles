@@ -4,6 +4,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
