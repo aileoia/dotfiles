@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'davidhalter/jedi-vim'
 Plug 'dense-analysis/ale'
 Plug 'ervandew/supertab'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
