@@ -45,6 +45,10 @@ set hidden		" Hide buffers when they are abandoned
 
 let mapleader = " "
 
+" Save and quit quickly
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :wq<CR>
+
 " Navigation between windows
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
