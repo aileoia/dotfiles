@@ -5,8 +5,10 @@ Plug 'dense-analysis/ale'  " Async linting
 Plug 'ervandew/supertab'  " Tabcompletion in insert mode
 Plug 'tpope/vim-eunuch'  " UNIX commands
 Plug 'tpope/vim-fugitive'  " Git support
+Plug 'tpope/vim-repeat'  " '.' repeating maps from plugins
 Plug 'tpope/vim-sensible'  " Sensible defaults
 Plug 'tpope/vim-surround'  " Brackets and parenthesis and such
+Plug 'tpope/vim-unimpaired'  " See the help
 
 call plug#end()
 
