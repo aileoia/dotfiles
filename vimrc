@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'davidhalter/jedi-vim' " Python IDE features
 Plug 'dense-analysis/ale'  " Async linting
 Plug 'ervandew/supertab'  " Tabcompletion in insert mode
+Plug 'sheerun/vim-polyglot'  " Color syntax for any language
 Plug 'tpope/vim-eunuch'  " UNIX commands
 Plug 'tpope/vim-fugitive'  " Git support
 Plug 'tpope/vim-repeat'  " '.' repeating maps from plugins
