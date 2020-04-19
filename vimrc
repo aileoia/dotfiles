@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'davidhalter/jedi-vim'          " Python IDE features
 Plug 'dense-analysis/ale'            " Async linting
 Plug 'ervandew/supertab'             " Tabcompletion in insert mode
+Plug 'drewtempelmeyer/palenight.vim' " Colorscheme
 Plug 'sheerun/vim-polyglot'          " Color syntax for any language
 Plug 'tpope/vim-eunuch'              " UNIX commands
 Plug 'tpope/vim-fugitive'            " Git support
@@ -10,6 +11,7 @@ Plug 'tpope/vim-repeat'              " '.' repeating maps from plugins
 Plug 'tpope/vim-sensible'            " Sensible defaults
 Plug 'tpope/vim-surround'            " Brackets and parenthesis and such
 Plug 'tpope/vim-unimpaired'          " See the help
+Plug 'vim-airline/vim-airline'       " Nice status line
 
 call plug#end()
 
@@ -45,6 +47,9 @@ set autoread            " Automatically reload files when externally changed
 "set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
+" Colorscheme
+colorscheme palenight
+let g:airline_theme = "palenight"
 
 let mapleader = " "
 
