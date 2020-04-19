@@ -2,8 +2,9 @@ call plug#begin()
 
 Plug 'davidhalter/jedi-vim'          " Python IDE features
 Plug 'dense-analysis/ale'            " Async linting
-Plug 'ervandew/supertab'             " Tabcompletion in insert mode
 Plug 'drewtempelmeyer/palenight.vim' " Colorscheme
+Plug 'ervandew/supertab'             " Tabcompletion in insert mode
+Plug 'preservim/nerdtree'            " File system navigation
 Plug 'sheerun/vim-polyglot'          " Color syntax for any language
 Plug 'tpope/vim-eunuch'              " UNIX commands
 Plug 'tpope/vim-fugitive'            " Git support
@@ -12,6 +13,7 @@ Plug 'tpope/vim-sensible'            " Sensible defaults
 Plug 'tpope/vim-surround'            " Brackets and parenthesis and such
 Plug 'tpope/vim-unimpaired'          " See the help
 Plug 'vim-airline/vim-airline'       " Nice status line
+Plug 'Xuyuanp/nerdtree-git-plugin'   " Git integration for NerdTree
 
 call plug#end()
 
@@ -51,6 +53,13 @@ set autoread            " Automatically reload files when externally changed
 colorscheme palenight
 let g:airline_theme = "palenight"
 
+" Surround
+let b:surround_indent = 1
+
+" Close NERDTree when it is the last open window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Key mappings
 let mapleader = " "
 
 " Save and quit quickly
@@ -68,8 +77,8 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <tab> :tabnext<CR>
 nnoremap <S-tab> :tabprevious<CR>
 
-" Surround
-let b:surround_indent = 1
+" NERDTree
+nnoremap <C-n> :NERDTreeToggleVCS<CR>
 
 
 " Fugitive
