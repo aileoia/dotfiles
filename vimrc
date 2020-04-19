@@ -52,6 +52,10 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-j> <C-w><C-j>
 
+" Naviation between tabs
+nnoremap <tab> :tabnext<CR>
+nnoremap <S-tab> :tabprevious<CR>
+
 
 " Fugitive
 nnoremap <leader>gs :Gstatus<CR>
