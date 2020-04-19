@@ -62,6 +62,9 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <tab> :tabnext<CR>
 nnoremap <S-tab> :tabprevious<CR>
 
+" Surround
+let b:surround_indent = 1
+
 
 " Fugitive
 nnoremap <leader>gs :Git<CR>
