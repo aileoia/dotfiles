@@ -1,5 +1,6 @@
 call plug#begin()
 
+Plug 'alfredodeza/pytest.vim'        " Pytest runner plugin
 Plug 'davidhalter/jedi-vim'          " Python IDE features
 Plug 'dense-analysis/ale'            " Async linting
 Plug 'drewtempelmeyer/palenight.vim' " Colorscheme
@@ -93,3 +94,8 @@ nnoremap <leader>gp :Git push<CR>
 " Ale linting
 nnoremap <leader>an :ALENext<CR>
 nnoremap <leader>ap :ALEPrevious<CR>
+
+" Pytest
+nnoremap <leader>tt :Pytest project<CR>
+nnoremap <leader>tv :Pytest project verbose<CR>
+nnoremap <leader>tf :Pytest file verbose<CR>
