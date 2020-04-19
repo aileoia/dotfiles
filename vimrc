@@ -60,3 +60,7 @@ nnoremap <S-tab> :tabprevious<CR>
 " Fugitive
 nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gp :Git push<CR>
+
+" Ale linting
+nnoremap <leader>an :ALENext<CR>
+nnoremap <leader>ap :ALEPrevious<CR>
