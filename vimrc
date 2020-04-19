@@ -58,4 +58,5 @@ nnoremap <S-tab> :tabprevious<CR>
 
 
 " Fugitive
-nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gp :Git push<CR>
