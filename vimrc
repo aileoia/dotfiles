@@ -4,7 +4,9 @@ Plug 'davidhalter/jedi-vim'          " Python IDE features
 Plug 'dense-analysis/ale'            " Async linting
 Plug 'drewtempelmeyer/palenight.vim' " Colorscheme
 Plug 'ervandew/supertab'             " Tabcompletion in insert mode
+Plug 'fisadev/vim-isort'             " Sort python imports
 Plug 'preservim/nerdtree'            " File system navigation
+Plug 'psf/black', {'tag': '19.10b0'} " Python formatting
 Plug 'sheerun/vim-polyglot'          " Color syntax for any language
 Plug 'tpope/vim-eunuch'              " UNIX commands
 Plug 'tpope/vim-fugitive'            " Git support
@@ -58,6 +60,9 @@ let b:surround_indent = 1
 
 " Close NERDTree when it is the last open window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Apply black on save
+autocmd BufWritePre *.py execute ':Black'
 
 " Key mappings
 let mapleader = " "
