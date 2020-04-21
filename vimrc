@@ -1,5 +1,6 @@
 call plug#begin()
 
+Plug 'alfredodeza/coveragepy.vim'    " Python coverage highlight
 Plug 'alfredodeza/pytest.vim'        " Pytest runner plugin
 Plug 'davidhalter/jedi-vim'          " Python IDE features
 Plug 'dense-analysis/ale'            " Async linting
@@ -102,3 +103,7 @@ nnoremap <leader>ap :ALEPrevious<CR>
 nnoremap <leader>tt :Pytest project<CR>
 nnoremap <leader>tv :Pytest project verbose<CR>
 nnoremap <leader>tf :Pytest file verbose<CR>
+
+" Coverage
+nnoremap <leader>cs :Coveragepy show<CR>
+nnoremap <leader>cr :Coveragepy session<CR>
