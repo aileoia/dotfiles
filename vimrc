@@ -17,6 +17,7 @@ Plug 'tpope/vim-surround'            " Brackets and parenthesis and such
 Plug 'tpope/vim-unimpaired'          " See the help
 Plug 'vim-airline/vim-airline'       " Nice status line
 Plug 'Xuyuanp/nerdtree-git-plugin'   " Git integration for NerdTree
+Plug 'zhou13/vim-easyescape/'        " Map jk and kj to <ESC>
 
 call plug#end()
 
