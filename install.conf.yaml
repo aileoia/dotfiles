@@ -9,3 +9,4 @@
     ~/.gitignore:
     ~/.vim/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.zshrc:
+    ~/.p10k.zsh:
