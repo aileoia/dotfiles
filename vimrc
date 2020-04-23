@@ -81,8 +81,8 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-j> <C-w><C-j>
 
 " Naviation between tabs
-nnoremap <tab> :tabnext<CR>
-nnoremap <S-tab> :tabprevious<CR>
+nnoremap <C-f> :tabnext<CR>
+nnoremap <C-d> :tabprevious<CR>
 
 " NERDTree
 nnoremap <C-n> :NERDTreeToggleVCS<CR>
