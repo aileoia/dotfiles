@@ -70,7 +70,8 @@ let mapleader = " "
 
 " Save and quit quickly
 nnoremap <leader>w :w<CR>
-nnoremap <leader>q :wq<CR>
+nnoremap <leader>q :x<CR>
+nnoremap <leader>x :xa<CR>
 
 " Navigation between windows
 nnoremap <C-h> <C-w><C-h>
