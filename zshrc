@@ -18,6 +18,12 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen theme romkatv/powerlevel10k
 antigen apply
 
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
+
 # Load environment variables if exist
 [[ -f $HOME/.environment ]] && . $HOME/.environment
 
