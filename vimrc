@@ -95,8 +95,8 @@ nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gb :Git blame<CR>
 
 " Ale linting
-nnoremap <leader>an :ALENext<CR>
-nnoremap <leader>ap :ALEPrevious<CR>
+nnoremap ]w :ALENext<CR>
+nnoremap [w :ALEPrevious<CR>
 
 " Pytest
 nnoremap <leader>tt :Pytest project<CR>
