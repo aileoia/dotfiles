@@ -4,8 +4,8 @@ Plug 'alfredodeza/coveragepy.vim'    " Python coverage highlight
 Plug 'alfredodeza/pytest.vim'        " Pytest runner plugin
 Plug 'davidhalter/jedi-vim'          " Python IDE features
 Plug 'dense-analysis/ale'            " Async linting
-Plug 'drewtempelmeyer/palenight.vim' " Colorscheme
-Plug 'ervandew/supertab'             " Tabcompletion in insert mode
+Plug 'drewtempelmeyer/palenight.vim' " Color scheme
+Plug 'ervandew/supertab'             " Tab completion in insert mode
 Plug 'fisadev/vim-isort'             " Sort python imports
 Plug 'preservim/nerdtree'            " File system navigation
 Plug 'psf/black', {'tag': '19.10b0'} " Python formatting
@@ -37,7 +37,7 @@ if has("autocmd")
 endif
 
 " Uncomment the following to have Vim load indentation rules and plugins
-" according to the detected filetype.
+" according to the detected file type.
 if has("autocmd")
   filetype plugin indent on
 endif
@@ -46,7 +46,6 @@ endif
 " differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
-"set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
@@ -54,7 +53,7 @@ set autoread            " Automatically reload files when externally changed
 "set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
-" Colorscheme
+" Color scheme
 colorscheme palenight
 let g:airline_theme = "palenight"
 
@@ -82,7 +81,7 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-j> <C-w><C-j>
 
-" Naviation between tabs
+" Navigation between tabs
 nnoremap <C-f> :tabnext<CR>
 nnoremap <C-d> :tabprevious<CR>
 
