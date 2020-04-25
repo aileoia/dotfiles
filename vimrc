@@ -53,7 +53,12 @@ set autoread            " Automatically reload files when externally changed
 set spell               " Spell checking per default
 
 " Color scheme
-colorscheme palenight
+" The palenight color scheme comes from a plugin which might not be installed.
+" In this case, vim startup should not fail.
+try
+    colorscheme palenight
+catch
+endtry
 let g:airline_theme = "palenight"
 
 " Surround
