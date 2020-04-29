@@ -179,3 +179,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Start notification deamon
+exec_always /bin/dunst
