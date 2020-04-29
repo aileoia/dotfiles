@@ -182,3 +182,6 @@ bar {
 
 # Start notification deamon
 exec_always /bin/dunst
+
+# Load mod mapping (to map menu to super)
+exec_always xmodmap ~/.Xmodmap
