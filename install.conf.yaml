@@ -12,5 +12,3 @@
     ~/.vim/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.vimrc:
     ~/.zshrc:
-- shell:
-  - [vim +PlugInstall +PlugClean +qall, install vim plugins]
