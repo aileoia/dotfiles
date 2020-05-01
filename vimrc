@@ -7,6 +7,7 @@ Plug 'dense-analysis/ale'            " Asynchronous linting
 Plug 'drewtempelmeyer/palenight.vim' " Color scheme
 Plug 'ervandew/supertab'             " Tab completion in insert mode
 Plug 'fisadev/vim-isort'             " Sort python imports
+Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
 Plug 'preservim/nerdtree'            " File system navigation
 Plug 'psf/black', {'tag': '19.10b0'} " Python formatting
 Plug 'sheerun/vim-polyglot'          " Color syntax for any language
