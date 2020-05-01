@@ -3,7 +3,7 @@ call plug#begin()
 Plug 'alfredodeza/coveragepy.vim'    " Python coverage highlight
 Plug 'alfredodeza/pytest.vim'        " Pytest runner plugin
 Plug 'davidhalter/jedi-vim'          " Python IDE features
-Plug 'dense-analysis/ale'            " Async linting
+Plug 'dense-analysis/ale'            " Asynchronous linting
 Plug 'drewtempelmeyer/palenight.vim' " Color scheme
 Plug 'ervandew/supertab'             " Tab completion in insert mode
 Plug 'fisadev/vim-isort'             " Sort python imports
