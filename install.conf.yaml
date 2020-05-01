@@ -5,7 +5,7 @@
 - clean: ['~']
 - link:
     ~/.antigen: submodules/antigen
-    ~/.config/i3/config: config/i3/config
+    ~/.config/i3/config: config/i3.config
     ~/.gitignore:
     ~/.p10k.zsh:
     ~/.profile:
