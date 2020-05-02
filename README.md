@@ -42,3 +42,22 @@ almost self-explained.  If you have a bit more time, checkout
 [dotbot](https://github.com/anishathalye/dotbot), which is the bootstrapping
 library used here.  It is also shipped as a submodule so that the installation
 of the these files can happen without having to install it manually.
+
+## What's inside
+
+### `zsh`
+
+The `zsh` shell is defined as default shell by appending `exec zsh` at the
+bottom of the `~/.bashrc` (see `install.conf.yaml`).
+
+The zsh plugins are managed by [antigen](https://github.com/zsh-users/antigen),
+which is provided as a git submodule.  _Note that the plugins get installed
+only the first time you start a `zsh` shell._
+
+The theme used is [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+already configured for my taste.  To reconfigure it, run `p10k configure` or
+just remove the file `p10k.zsh`.  Note that for this theme to work well, the
+Meslo Nerd Font is recommended, see above.
+
+Checkout `zshrc` to see which plugins are activated, they are defined right
+after `bundle` (any recommendation is welcome!).
