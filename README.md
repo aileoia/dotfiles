@@ -61,3 +61,13 @@ Meslo Nerd Font is recommended, see above.
 
 Checkout `zshrc` to see which plugins are activated, they are defined right
 after `bundle` (any recommendation is welcome!).
+
+## Vim
+
+Vim plugins are manage by [vim-plug](https://github.com/junegunn/vim-plug)
+which is shipped as a submodule.  To install all the plugins, run
+`:PlugInstall` inside vim, or
+```bash
+vim +PlugInstall
+```
+from a terminal.
