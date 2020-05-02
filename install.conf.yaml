@@ -9,7 +9,13 @@
     ~/.config/i3/config: config/i3.config
     ~/.gitignore:
     ~/.p10k.zsh:
-    ~/.profile:
     ~/.vim/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.vimrc:
     ~/.zshrc:
+- shell:
+    - command: |
+        if ! cat ~/.bashrc | grep "exec zsh"
+        then
+          echo "which zsh > /dev/null  && exec zsh" >> ~/.bashrc
+        fi
+      description: Append 'exec zsh' to bashrc
