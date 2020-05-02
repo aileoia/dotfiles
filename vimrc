@@ -52,6 +52,7 @@ set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
 set autoread            " Automatically reload files when externally changed
 set spell               " Spell checking per default
+set nowrap              " Disable line wrapping (with unimpaired use yow to toggle)
 
 " Color scheme
 " The palenight color scheme comes from a plugin which might not be installed.
