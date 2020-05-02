@@ -100,7 +100,7 @@ nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gb :Git blame<CR>
 
-" Ale linting
+" Got to next and previous linting error
 nnoremap ]w :ALENext<CR>
 nnoremap [w :ALEPrevious<CR>
 
