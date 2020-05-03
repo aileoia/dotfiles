@@ -12,6 +12,7 @@ Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
 Plug 'preservim/nerdtree'            " File system navigation
 Plug 'psf/black', {'tag': '19.10b0'} " Python formatting
 Plug 'sheerun/vim-polyglot'          " Color syntax for any language
+Plug 'tmhedberg/SimpylFold'          " Python folding
 Plug 'tpope/vim-eunuch'              " UNIX commands
 Plug 'tpope/vim-fugitive'            " Git support
 Plug 'tpope/vim-repeat'              " '.' repeating maps from plugins
