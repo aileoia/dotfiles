@@ -68,6 +68,8 @@ let b:surround_indent = 1
 
 " Close NERDTree when it is the last open window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Ignore temporary files in NERDTree
+let NERDTreeIgnore=['\.pyc', '__pycache__', '\.git', '\.eggs', '\.egg-info', '_cache', '\.swp', '\.tox']
 
 " Apply black on save
 autocmd BufWritePre *.py execute ':Black'
