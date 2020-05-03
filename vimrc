@@ -7,6 +7,7 @@ Plug 'dense-analysis/ale'            " Asynchronous linting
 Plug 'drewtempelmeyer/palenight.vim' " Color scheme
 Plug 'ervandew/supertab'             " Tab completion in insert mode
 Plug 'fisadev/vim-isort'             " Sort python imports
+Plug 'majutsushi/tagbar'             " Module/class tag bar
 Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
 Plug 'preservim/nerdtree'            " File system navigation
 Plug 'psf/black', {'tag': '19.10b0'} " Python formatting
@@ -101,6 +102,9 @@ nnoremap <C-n> :NERDTreeToggleVCS<CR>
 nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gb :Git blame<CR>
+
+" Python Tags
+nnoremap <leader>b :TagbarToggle<CR>
 
 " Got to next and previous linting error
 nnoremap ]w :ALENext<CR>
