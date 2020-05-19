@@ -10,6 +10,7 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle esc/conda-zsh-completion
 antigen bundle git
+antigen bundle git-auto-fetch
 antigen bundle vi-mode
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
