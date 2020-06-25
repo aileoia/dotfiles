@@ -25,6 +25,10 @@ Plug 'vim-pandoc/vim-pandoc-syntax'  " Pandoc (markdown) syntax
 Plug 'Xuyuanp/nerdtree-git-plugin'   " Git integration for NerdTree
 Plug 'zhou13/vim-easyescape/'        " Map jk and kj to <ESC>
 
+if has('nvim')
+    Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+endif
+
 call plug#end()
 
 if has("syntax")
