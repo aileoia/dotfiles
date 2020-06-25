@@ -8,7 +8,9 @@
     ~/.antigen: submodules/antigen
     ~/.config/i3/config: config/i3.config
     ~/.config/i3blocks.conf: config/i3blocks.conf
+    ~/.config/nvim/init.vim: vimrc
     ~/.gitignore:
+    ~/.local/share/nvim/site/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.p10k.zsh:
     ~/.vim/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.vimrc:
