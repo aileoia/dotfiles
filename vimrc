@@ -26,7 +26,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'   " Git integration for NerdTree
 Plug 'zhou13/vim-easyescape/'        " Map jk and kj to <ESC>
 
 if has('nvim')
-    Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+    Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Semantic highlighting
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
 
 call plug#end()
@@ -70,6 +71,13 @@ try
 catch
 endtry
 let g:airline_theme = "palenight"
+
+" Jedi
+let g:jedi#completions_enabled = 0
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_delay = 100  " Increase delay for semshi
 
 " Surround
 let b:surround_indent = 1
