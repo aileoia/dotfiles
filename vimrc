@@ -26,6 +26,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'   " Git integration for NerdTree
 Plug 'zhou13/vim-easyescape/'        " Map jk and kj to <ESC>
 
 if has('nvim')
+    Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Semantic highlighting
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
