@@ -130,6 +130,8 @@ nnoremap [w :ALEPrevious<CR>
 nnoremap <leader>tt :Pytest project<CR>
 nnoremap <leader>tv :Pytest project verbose<CR>
 nnoremap <leader>tf :Pytest file verbose<CR>
+nnoremap <leader>tll :Pytest function<CR>
+nnoremap <leader>tlv :Pytest function verbose<CR>
 
 " Coverage
 nnoremap <leader>cs :Coveragepy show<CR>
