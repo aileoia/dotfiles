@@ -30,6 +30,8 @@ if has('nvim')
     Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Semantic highlighting
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+    let g:python3_host_prog='/usr/bin/python3'
 endif
 
 call plug#end()
