@@ -22,6 +22,7 @@ Plug 'tpope/vim-unimpaired'          " See the help
 Plug 'vim-airline/vim-airline'       " Nice status line
 Plug 'vim-pandoc/vim-pandoc'         " Pandoc integration
 Plug 'vim-pandoc/vim-pandoc-syntax'  " Pandoc (markdown) syntax
+Plug 'vim-scripts/bats.vim'          " Syntax highlighting for bats
 Plug 'Xuyuanp/nerdtree-git-plugin'   " Git integration for NerdTree
 Plug 'zhou13/vim-easyescape/'        " Map jk and kj to <ESC>
 
