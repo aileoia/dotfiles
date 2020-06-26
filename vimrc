@@ -80,8 +80,10 @@ let g:airline_theme = "palenight"
 let g:jedi#completions_enabled = 0
 
 " Deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 100  " Increase delay for semshi
+if has('nvim')
+    let g:deoplete#enable_at_startup = 1
+    call deoplete#custom#option('auto_complete_delay', 200)
+endif
 
 " Surround
 let b:surround_indent = 1
