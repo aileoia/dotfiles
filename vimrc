@@ -88,6 +88,9 @@ endif
 " Surround
 let b:surround_indent = 1
 
+" Scroll down with supertab
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 " Close NERDTree when it is the last open window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Ignore temporary files in NERDTree
