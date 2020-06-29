@@ -30,6 +30,7 @@ Plug 'zhou13/vim-easyescape/'        " Map jk and kj to <ESC>
 
 if has('nvim')
     Plug 'deoplete-plugins/deoplete-jedi'
+    Plug 'deoplete-plugins/deoplete-dictionary'
     Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Semantic highlighting
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
@@ -86,6 +87,9 @@ if has('nvim')
     let g:deoplete#enable_at_startup = 1
     call deoplete#custom#option('auto_complete_delay', 200)
 endif
+
+" Set the buffer-local 'dictionary' for autocompletion
+setlocal dictionary+=/usr/share/dict/american-english
 
 " Surround
 let b:surround_indent = 1
