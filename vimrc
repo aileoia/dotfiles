@@ -77,7 +77,9 @@ colorscheme palenight
 let g:airline_theme = "palenight"
 
 " Jedi
-let g:jedi#completions_enabled = 0
+if has("nvim")
+    let g:jedi#completions_enabled = 0
+endif
 
 " Deoplete
 if has('nvim')
