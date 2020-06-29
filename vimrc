@@ -73,10 +73,7 @@ set nowrap              " Disable line wrapping (with unimpaired use yow to togg
 " Color scheme
 " The palenight color scheme comes from a plugin which might not be installed.
 " In this case, vim startup should not fail.
-try
-    colorscheme palenight
-catch
-endtry
+colorscheme palenight
 let g:airline_theme = "palenight"
 
 " Jedi
