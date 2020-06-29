@@ -2,3 +2,6 @@
 
 # Vim recovery files
 .*.swp
+
+# tags
+tags
