@@ -10,6 +10,7 @@ Plug 'fisadev/vim-isort'             " Sort python imports
 Plug 'ludovicchabant/vim-gutentags'  " Tag management
 Plug 'majutsushi/tagbar'             " Module/class tag bar
 Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
+Plug 'mgedmin/python-imports.vim'    " Auto import for Python
 Plug 'preservim/nerdtree'            " File system navigation
 Plug 'psf/black', {'tag': '19.10b0'} " Python formatting
 Plug 'sheerun/vim-polyglot'          " Color syntax for any language
