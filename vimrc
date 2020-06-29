@@ -83,7 +83,9 @@ endif
 
 " Deoplete
 if has('nvim')
+    " Enable autocompletion at startup
     let g:deoplete#enable_at_startup = 1
+    " Increase delay because of Semshi
     call deoplete#custom#option('auto_complete_delay', 200)
 endif
 
