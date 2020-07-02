@@ -7,7 +7,6 @@ Plug 'dense-analysis/ale'            " Asynchronous linting
 Plug 'drewtempelmeyer/palenight.vim' " Color scheme
 Plug 'ervandew/supertab'             " Tab completion in insert mode
 Plug 'fisadev/vim-isort'             " Sort python imports
-Plug 'ludovicchabant/vim-gutentags'  " Tag management
 Plug 'majutsushi/tagbar'             " Module/class tag bar
 Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
 Plug 'mgedmin/python-imports.vim'    " Auto import for Python
@@ -31,6 +30,7 @@ Plug 'zhou13/vim-easyescape/'        " Map jk and kj to <ESC>
 if has('nvim')
     Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'deoplete-plugins/deoplete-dictionary'
+    Plug 'ludovicchabant/vim-gutentags'  " Tag management
     Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Semantic highlighting
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
