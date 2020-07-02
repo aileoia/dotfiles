@@ -138,8 +138,8 @@ nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>b :TagbarToggle<CR>
 
 " Got to next and previous linting error
-nnoremap ]w :ALENext<CR>
-nnoremap [w :ALEPrevious<CR>
+nnoremap <silent>]w :ALENext<CR>
+nnoremap <silent>[w :ALEPrevious<CR>
 
 " Pytest
 nnoremap <leader>tt :Pytest project<CR>
