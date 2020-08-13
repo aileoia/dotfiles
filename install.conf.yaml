@@ -6,6 +6,7 @@
 - clean: ['~']
 - link:
     ~/.antigen: submodules/antigen
+    ~/.config/feh/themes: config/feh/themes
     ~/.config/i3/config: config/i3.config
     ~/.config/i3blocks.conf: config/i3blocks.conf
     ~/.config/nvim/init.vim: vimrc
