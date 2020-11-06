@@ -7,6 +7,7 @@ Plug 'dense-analysis/ale'            " Asynchronous linting
 Plug 'drewtempelmeyer/palenight.vim' " Color scheme
 Plug 'ervandew/supertab'             " Tab completion in insert mode
 Plug 'fisadev/vim-isort'             " Sort python imports
+Plug 'jiangmiao/auto-pairs'          " Automatically close brackets
 Plug 'majutsushi/tagbar'             " Module/class tag bar
 Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
 Plug 'mgedmin/python-imports.vim'    " Auto import for Python
@@ -75,6 +76,9 @@ set nowrap              " Disable line wrapping (with unimpaired use yow to togg
 " In this case, vim startup should not fail.
 colorscheme palenight
 let g:airline_theme = "palenight"
+
+" Auto-pairs
+let g:AutoPairsFlyMode = 1  " Activate Fly mode per default
 
 " Jedi
 if has("nvim")
