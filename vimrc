@@ -93,9 +93,6 @@ if has('nvim')
     call deoplete#custom#option('auto_complete_delay', 200)
 endif
 
-" Set the buffer-local 'dictionary' for autocompletion
-setlocal dictionary+=/usr/share/dict/american-english
-
 " Surround
 let b:surround_indent = 1
 
