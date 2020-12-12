@@ -10,6 +10,7 @@
     ~/.config/i3/config: config/i3.config
     ~/.config/i3blocks.conf: config/i3blocks.conf
     ~/.config/nvim/init.vim: vimrc
+    ~/.config/ranger: config/ranger
     ~/.gitignore:
     ~/.local/share/nvim/site/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.p10k.zsh:
