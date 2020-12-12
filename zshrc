@@ -12,9 +12,10 @@ antigen bundle esc/conda-zsh-completion
 antigen bundle git
 antigen bundle git-auto-fetch
 antigen bundle vi-mode
+antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen theme romkatv/powerlevel10k
 antigen apply
