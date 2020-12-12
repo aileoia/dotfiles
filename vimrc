@@ -114,7 +114,7 @@ autocmd BufWritePre *.py execute ':Black'
 let mapleader = " "
 
 " Save and quit quickly
-nnoremap <leader>w :w<CR>
+nnoremap <leader>w :wa<CR>
 nnoremap <leader>q :x<CR>
 nnoremap <leader>x :xa<CR>
 
