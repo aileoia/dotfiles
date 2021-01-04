@@ -46,3 +46,5 @@ unset __conda_setup
 
 # Load environment variables if exist
 [[ -f $HOME/.environment ]] && . $HOME/.environment
+
+eval $(thefuck --alias)
