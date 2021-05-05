@@ -7,3 +7,6 @@
 tags
 tags.lock
 tags.temp
+
+# PyCharm related
+.idea
