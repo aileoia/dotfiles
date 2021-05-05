@@ -36,3 +36,7 @@
       description: Download and reinstall nvim
     - command: pip3 install --user pynvim black
       description: Install dependencies needed for vim/nvim
+    - command: vim +PlugInstall +qall
+      description: Install vim plugins
+    - command: nvim +PlugInstall +qall
+      description: Install nvim plugins
