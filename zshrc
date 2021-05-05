@@ -47,4 +47,7 @@ unset __conda_setup
 # Load environment variables if exist
 [[ -f $HOME/.environment ]] && . $HOME/.environment
 
+# Add local binaries
+export PATH=$HOME/.local/bin:$PATH
+
 eval $(thefuck --alias)
