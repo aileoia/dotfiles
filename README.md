@@ -15,16 +15,12 @@ checkout `install.conf.yaml`.
 
 ### Installation
 
-Clone recursively
+Clone
 ```bash
-git clone --recursive https://github.com/aileoia/dotfiles ~/.dotfiles
-```
-If you forget the `--recursive`, then just enter
-```bash
-git submodule update --init --recursive
+git clone https://github.com/aileoia/dotfiles ~/.dotfiles
 ```
 
-This will get all the dependencies.  To install, enter:
+To install, enter:
 ```bash
 cd ~/.dotfiles
 ./install
