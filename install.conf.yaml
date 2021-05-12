@@ -6,6 +6,9 @@
 - clean: ['~']
 - create:
     - ~/.local/bin
+- shell:
+    - command: git submodule update --init --recursive
+      description: Installing submodules
 - link:
     ~/.antigen: submodules/antigen
     ~/.config/feh/themes: config/feh/themes
@@ -26,8 +29,6 @@
           echo "which zsh > /dev/null  && exec zsh" >> ~/.bashrc
         fi
       description: Append 'exec zsh' to bashrc
-    - command: git submodule update --init --recursive
-      description: Installing submodules
       # yamllint disable rule:line-length
     - command: |
         rm ~/.local/bin/nvim
