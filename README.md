@@ -13,6 +13,21 @@ checkout `install.conf.yaml`.
 
 ## Getting started
 
+### Requirements
+
+The following commands are assumed to be available for a successful installation:
+
+* `wget` to download `nvim`
+* `pip3` to install dependencies needed for `nvim` and `vim`
+* `fuse` to be able to run the `nvim` AppImage
+* `vim` so that the vim plugins can be installed
+
+If these commands are missing, then the install script will output an error,
+but nevertheless the config files will be installed.
+
+It is highly recommended to install `zsh` even though no error will be shown if
+it is missing.
+
 ### Installation
 
 Clone
