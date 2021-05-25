@@ -13,6 +13,7 @@ Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
 Plug 'mgedmin/python-imports.vim'    " Auto import for Python
 Plug 'preservim/nerdtree'            " File system navigation
 Plug 'psf/black', {'tag': '19.10b0'} " Python formatting
+Plug 'relastle/vim-nayvy'            " Python imports
 Plug 'sheerun/vim-polyglot'          " Color syntax for any language
 Plug 'tmhedberg/SimpylFold'          " Python folding
 Plug 'tpope/vim-eunuch'              " UNIX commands
@@ -141,6 +142,10 @@ nnoremap <leader>b :TagbarToggle<CR>
 " Got to next and previous linting error
 nnoremap <silent>]w :ALENext<CR>
 nnoremap <silent>[w :ALEPrevious<CR>
+
+let g:ale_fixers = {
+      \ 'python': ['nayvy#ale_fixer', 'black', 'isort'],
+      \ }
 
 " Pytest
 nnoremap <leader>tt :Pytest project<CR>
