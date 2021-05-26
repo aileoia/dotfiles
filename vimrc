@@ -7,6 +7,7 @@ Plug 'dense-analysis/ale'            " Asynchronous linting
 Plug 'drewtempelmeyer/palenight.vim' " Color scheme
 Plug 'ervandew/supertab'             " Tab completion in insert mode
 Plug 'fisadev/vim-isort'             " Sort python imports
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 Plug 'jiangmiao/auto-pairs'          " Automatically close brackets
 Plug 'majutsushi/tagbar'             " Module/class tag bar
 Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
@@ -104,6 +105,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Ignore temporary files in NERDTree
 let NERDTreeIgnore=['\.pyc', '__pycache__', '\.git', '\.eggs', '\.egg-info', '_cache', '\.swp', '\.tox']
+
+" Configure numpy formatting for docstrings
+let g:pydocstring_formatter = 'numpy'
 
 " Apply black on save
 autocmd BufWritePre *.py execute ':Black'
