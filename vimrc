@@ -109,6 +109,11 @@ let NERDTreeIgnore=['\.pyc', '__pycache__', '\.git', '\.eggs', '\.egg-info', '_c
 " Configure numpy formatting for docstrings
 let g:pydocstring_formatter = 'numpy'
 
+" ALE config
+let g:ale_fixers = {
+      \ 'python': ['nayvy#ale_fixer', 'black', 'isort'],
+      \ }
+
 " Apply black on save
 autocmd BufWritePre *.py execute ':Black'
 
@@ -146,10 +151,6 @@ nnoremap <leader>b :TagbarToggle<CR>
 " Got to next and previous linting error
 nnoremap <silent>]w :ALENext<CR>
 nnoremap <silent>[w :ALEPrevious<CR>
-
-let g:ale_fixers = {
-      \ 'python': ['nayvy#ale_fixer', 'black', 'isort'],
-      \ }
 
 " Pytest
 nnoremap <leader>tt :Pytest project<CR>
