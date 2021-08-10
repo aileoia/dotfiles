@@ -142,7 +142,7 @@ nnoremap <C-n> :NERDTreeToggleVCS<CR>
 
 
 " Fugitive
-nnoremap <leader>gs :vertical Git<CR>
+nnoremap <leader>gs :wa<CR> :vertical Git<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gb :Git blame<CR>
 
