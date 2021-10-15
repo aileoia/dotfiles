@@ -50,4 +50,6 @@ unset __conda_setup
 # Add local binaries
 export PATH=$HOME/.local/bin:$PATH
 
+alias vim=nvim
+
 eval $(thefuck --alias)
