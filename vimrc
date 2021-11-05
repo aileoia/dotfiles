@@ -108,6 +108,7 @@ let NERDTreeIgnore=['\.pyc', '__pycache__', '\.git', '\.eggs', '\.egg-info', '_c
 
 " Configure numpy formatting for docstrings
 let g:pydocstring_formatter = 'numpy'
+nmap <silent> <leader>ds <Plug>(pydocstring)
 
 " ALE config
 let g:ale_fixers = {
