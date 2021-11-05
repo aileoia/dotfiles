@@ -8,9 +8,12 @@ rm Miniconda3-latest-Linux-x86_64.sh
 source zshrc
 
 pip install --user pipx
-pipx install dvc"[all]"
 pipx install black
+pipx install dvc"[all]"
 pipx install flake8
 pipx install isort
 pipx install pre-commit
+pipx install ranger-fm
+pipx install thefuck
 pipx install tox
+pipx install ueberzug
