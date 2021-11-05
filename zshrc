@@ -51,5 +51,6 @@ unset __conda_setup
 export PATH=$HOME/.local/bin:$PATH
 
 alias vim=nvim
+export EDITOR=vim
 
 eval $(thefuck --alias)
