@@ -35,8 +35,6 @@
         wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage -O ~/.local/bin/nvim
         chmod +x ~/.local/bin/nvim
       description: Download and reinstall nvim
-    - command: pip3 install --user pynvim black
-      description: Install dependencies needed for vim/nvim
     - command: vim +PlugInstall +qall
       description: Install vim plugins
     - command: nvim +PlugInstall +qall

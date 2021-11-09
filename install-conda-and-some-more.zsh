@@ -7,7 +7,7 @@ rm Miniconda3-latest-Linux-x86_64.sh
 
 source zshrc
 
-pip install --user pipx
+pip install --user pipx pynvim
 pipx install black
 pipx install dvc"[all]"
 pipx install flake8
