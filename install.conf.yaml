@@ -37,5 +37,5 @@
       description: Download and reinstall nvim
     - command: vim +PlugInstall +qall
       description: Install vim plugins
-    - command: nvim +PlugInstall +qall
+    - command: ~/.local/bin/nvim +PlugInstall +qall
       description: Install nvim plugins
