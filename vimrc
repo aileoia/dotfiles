@@ -36,7 +36,7 @@ if has('nvim')
     Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Semantic highlighting
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-    let g:python3_host_prog='/usr/bin/python3'
+    let g:python3_host_prog='~/miniconda3/bin/python3'
 endif
 
 call plug#end()
