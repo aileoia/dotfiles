@@ -26,6 +26,9 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 
+# Add local binaries
+export PATH=$HOME/.local/bin:$PATH
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$($HOME/miniconda3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
@@ -46,9 +49,6 @@ unset __conda_setup
 
 # Load environment variables if exist
 [[ -f $HOME/.environment ]] && . $HOME/.environment
-
-# Add local binaries
-export PATH=$HOME/.local/bin:$PATH
 
 alias vim=nvim
 export EDITOR=vim
