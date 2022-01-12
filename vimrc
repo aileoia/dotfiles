@@ -146,9 +146,9 @@ nnoremap <C-n> :NERDTreeToggleVCS<CR>
 
 
 " Fugitive
-nnoremap <leader>gs :wa<CR> :vertical Git<CR>
-nnoremap <leader>gp :Git push<CR>
-nnoremap <leader>gb :Git blame<CR>
+nnoremap gs :wa<CR> :vertical Git<CR>
+nnoremap gp :Git push<CR>
+nnoremap gb :Git blame<CR>
 
 " Python Tags
 nnoremap <leader>b :TagbarToggle<CR>
