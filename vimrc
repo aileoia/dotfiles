@@ -151,12 +151,12 @@ nnoremap gp :Git push<CR>
 nnoremap gb :Git blame<CR>
 
 " Goto's
-nnoremap gn :Semshi goto name next<CR>zO zz
-nnoremap gN :Semshi goto name prev<CR>zO zz
-nnoremap gf :Semshi goto function next<CR>zO zz
-nnoremap gF k:Semshi goto function prev<CR>zO zz
-nnoremap gc :Semshi goto class next<CR>zO zz
-nnoremap gC k:Semshi goto class prev<CR>zO zz
+nnoremap gn :Semshi goto name next<CR>zOzz
+nnoremap gN :Semshi goto name prev<CR>zOzz
+nnoremap gf :Semshi goto function next<CR>zOzt
+nnoremap gF k:Semshi goto function prev<CR>zOzt
+nnoremap gc :Semshi goto class next<CR>zOzt
+nnoremap gC k:Semshi goto class prev<CR>zOzt
 
 " Python Tags
 nnoremap <leader>b :TagbarToggle<CR>
