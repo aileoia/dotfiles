@@ -150,6 +150,14 @@ nnoremap gs :wa<CR> :vertical Git<CR>
 nnoremap gp :Git push<CR>
 nnoremap gb :Git blame<CR>
 
+" Goto's
+nnoremap gn :Semshi goto name next<CR>zO zz
+nnoremap gN :Semshi goto name prev<CR>zO zz
+nnoremap gf :Semshi goto function next<CR>zO zz
+nnoremap gF k:Semshi goto function prev<CR>zO zz
+nnoremap gc :Semshi goto class next<CR>zO zz
+nnoremap gC k:Semshi goto class prev<CR>zO zz
+
 " Python Tags
 nnoremap <leader>b :TagbarToggle<CR>
 
