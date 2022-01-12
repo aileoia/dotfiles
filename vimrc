@@ -162,8 +162,8 @@ nnoremap gC k:Semshi goto class prev<CR>zOzt
 nnoremap <leader>b :TagbarToggle<CR>
 
 " Got to next and previous linting error
-nnoremap <silent>]w :ALENext<CR>
-nnoremap <silent>[w :ALEPrevious<CR>
+nnoremap <silent>]w :ALENext<CR>zOzz
+nnoremap <silent>[w :ALEPrevious<CR>zOzz
 
 " Pytest
 nnoremap <leader>tt :Pytest project<CR>
