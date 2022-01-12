@@ -119,6 +119,9 @@ let g:ale_fixers = {
 " Apply black on save
 autocmd BufWritePre *.py execute ':Black'
 
+" DVC
+autocmd! BufNewFile,BufRead Dvcfile,*.dvc,dvc.lock setfiletype yaml
+
 " Key mappings
 let mapleader = " "
 
