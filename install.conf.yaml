@@ -31,6 +31,11 @@
       description: Append 'exec zsh' to bashrc
       # yamllint disable rule:line-length
     - command: |
+        rm ~/.local/bin/zellij
+        wget https://github.com/zellij-org/zellij/releases/download/v0.27.0/zellij-x86_64-unknown-linux-musl.tar.gz -O /tmp/zellij.tar.gz
+        tar xvf /tmp/zellij.tar.gz --directory ~/.local/bin/
+      description: Download and reinstall zellij
+    - command: |
         rm ~/.local/bin/nvim
         wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage -O ~/.local/bin/nvim
         chmod +x ~/.local/bin/nvim
