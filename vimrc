@@ -9,6 +9,7 @@ Plug 'ervandew/supertab'             " Tab completion in insert mode
 Plug 'fisadev/vim-isort'             " Sort python imports
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 Plug 'jiangmiao/auto-pairs'          " Automatically close brackets
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'majutsushi/tagbar'             " Module/class tag bar
 Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
 Plug 'mgedmin/python-imports.vim'    " Auto import for Python
