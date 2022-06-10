@@ -16,6 +16,7 @@
     ~/.config/i3blocks.conf: config/i3blocks.conf
     ~/.config/nvim/init.vim: vimrc
     ~/.config/ranger/rc.conf: config/ranger/rc.conf
+    ~/.config/regolith2/i3/config.d/40_default-style: config/regolith2/i3/config.d/40_default-style
     ~/.gitignore:
     ~/.local/share/nvim/site/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.p10k.zsh:
