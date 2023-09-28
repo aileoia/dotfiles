@@ -15,7 +15,7 @@ Plug 'mboughaba/i3config.vim'        " Syntax for i3 config file
 Plug 'mgedmin/python-imports.vim'    " Auto import for Python
 Plug 'pedrohdz/vim-yaml-folds'       " Yaml folding
 Plug 'preservim/nerdtree'            " File system navigation
-Plug 'psf/black', {'tag': '19.10b0'} " Python formatting
+Plug 'psf/black'                     " Python formatting
 Plug 'relastle/vim-nayvy'            " Python imports
 Plug 'sheerun/vim-polyglot'          " Color syntax for any language
 Plug 'tmhedberg/SimpylFold'          " Python folding
