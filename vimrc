@@ -2,6 +2,7 @@ call plug#begin()
 
 Plug 'alfredodeza/coveragepy.vim'    " Python coverage highlight
 Plug 'alfredodeza/pytest.vim'        " Pytest runner plugin
+Plug 'chrisbra/csv.vim'
 Plug 'davidhalter/jedi-vim'          " Python IDE features
 Plug 'dense-analysis/ale'            " Asynchronous linting
 Plug 'drewtempelmeyer/palenight.vim' " Color scheme
