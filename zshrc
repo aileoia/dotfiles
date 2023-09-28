@@ -51,6 +51,13 @@ unset __conda_setup
 [[ -f $HOME/.environment ]] && . $HOME/.environment
 
 alias vim=nvim
-export EDITOR=vim
+export EDITOR=nvim
 
 eval $(thefuck --alias)
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+
+alias gl="git pull --ff-only"
+alias glr="git pull --rebase"
