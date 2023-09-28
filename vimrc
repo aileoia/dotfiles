@@ -115,8 +115,9 @@ let g:pydocstring_formatter = 'numpy'
 nmap <silent> <leader>ds <Plug>(pydocstring)
 
 " ALE config
+let g:ale_linters = { "python": ["ruff", "mypy", "pylint"] }
 let g:ale_fixers = {
-      \ 'python': ['nayvy#ale_fixer', 'black', 'isort'],
+      \ 'python': ['nayvy#ale_fixer', 'black', 'isort', 'ruff'],
       \ }
 
 " Apply black on save
