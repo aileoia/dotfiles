@@ -14,5 +14,6 @@ pipx install flake8
 pipx install isort
 pipx install pre-commit
 pipx install ranger-fm
+pipx install ruff
 pipx install thefuck
 pipx install tox
