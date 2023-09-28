@@ -26,6 +26,7 @@ Plug 'tpope/vim-repeat'              " '.' repeating maps from plugins
 Plug 'tpope/vim-sensible'            " Sensible defaults
 Plug 'tpope/vim-surround'            " Brackets and parenthesis and such
 Plug 'tpope/vim-unimpaired'          " See the help
+Plug 'tveskag/nvim-blame-line'       " Blame on each line
 Plug 'vim-airline/vim-airline'       " Nice status line
 Plug 'vim-pandoc/vim-pandoc'         " Pandoc integration
 Plug 'vim-pandoc/vim-pandoc-syntax'  " Pandoc (markdown) syntax
