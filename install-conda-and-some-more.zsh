@@ -16,4 +16,3 @@ pipx install pre-commit
 pipx install ranger-fm
 pipx install thefuck
 pipx install tox
-pipx install ueberzug
