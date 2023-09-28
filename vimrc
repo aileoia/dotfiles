@@ -172,7 +172,8 @@ nnoremap <silent>[w :ALEPrevious<CR>zOzz
 " Pytest
 nnoremap <leader>tt :Pytest project<CR>
 nnoremap <leader>tv :Pytest project verbose<CR>
-nnoremap <leader>tf :Pytest file verbose<CR>
+nnoremap <leader>tff :Pytest file<CR>
+nnoremap <leader>tfv :Pytest file verbose<CR>
 nnoremap <leader>tll :Pytest function<CR>
 nnoremap <leader>tlv :Pytest function verbose<CR>
 
