@@ -14,7 +14,9 @@
     ~/.config/feh/themes: config/feh/themes
     ~/.config/i3/config: config/i3.config
     ~/.config/i3blocks.conf: config/i3blocks.conf
-    ~/.config/nvim/init.vim: vimrc
+    ~/.config/nvim/:
+        path: config/nvim/*
+        glob: true
     ~/.config/ranger/rc.conf: config/ranger/rc.conf
     ~/.config/regolith2/i3/config.d/40_default-style: config/regolith2/i3/config.d/40_default-style
     ~/.gitignore:
@@ -38,5 +40,3 @@
       description: Download and reinstall nvim
     - command: vim +PlugInstall +qall
       description: Install vim plugins
-    - command: ~/.local/bin/nvim +PlugInstall +qall
-      description: Install nvim plugins
