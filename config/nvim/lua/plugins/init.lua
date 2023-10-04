@@ -23,26 +23,26 @@ return {
       vim.g.suda_nopass = 1
     end,
   },
-  "mechatroner/rainbow_csv",       --
-  "junegunn/fzf",
-  "mgedmin/python-imports.vim",    -- Auto import for Python
+  "drewtempelmeyer/palenight.vim", -- Color scheme
   "ellisonleao/gruvbox.nvim",
+  "junegunn/fzf",
+  "mechatroner/rainbow_csv",       --
+  "mfussenegger/nvim-dap",
+  "mgedmin/python-imports.vim",    -- Auto import for Python
+  "neovim/nvim-lspconfig",
+  "rafamadriz/friendly-snippets",
   "tmhedberg/SimpylFold",         -- Python folding
   "tpope/vim-eunuch",             -- UNIX commands
   "tpope/vim-fugitive",           -- Git support
   "tpope/vim-repeat",             -- "." repeating maps from plugins
   "tpope/vim-sensible",           -- Sensible defaults
   "tpope/vim-unimpaired",         -- See the help
+  "tree-sitter/tree-sitter-python",
   "tveskag/nvim-blame-line",      -- Git blamer
   "vim-airline/vim-airline",      -- Nice status line
-  "zhou13/vim-easyescape",        -- Map jk and kj to <ESC>
-  "zaldih/themery.nvim",
-  "wookayin/semshi",
-  "tree-sitter/tree-sitter-python",
-  "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
-  "neovim/nvim-lspconfig",
-  "rafamadriz/friendly-snippets",
-  "mfussenegger/nvim-dap",
-  "drewtempelmeyer/palenight.vim", -- Color scheme
+  "williamboman/mason.nvim",
+  "wookayin/semshi",
+  "zaldih/themery.nvim",
+  "zhou13/vim-easyescape",        -- Map jk and kj to <ESC>
  }

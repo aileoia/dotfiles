@@ -30,8 +30,12 @@ vim.opt.cursorline = true -- Highlight the current line
 vim.opt.termguicolors = true
 vim.opt.number = false
 vim.opt.mouse = "nv"
+vim.opt.clipboard = "unnamedplus"  -- Interact easily with system clipboard
 vim.b.surround_indent = 0 -- surround
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
--- require("lsp-config")
+require("lsp-config")
 require("keymap") -- key mappings
 -- require("autocmd") -- auto commands
+
+
+vim.g.python3_host_prog = "~/miniconda3/bin/python3"
