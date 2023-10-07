@@ -23,6 +23,11 @@ return {
       vim.g.suda_nopass = 1
     end,
   },
+  {
+    "wookayin/semshi",
+    build = ":UpdateRemotePlugins",
+    version = "*",  -- Recommended to use the latest release
+  },
   "drewtempelmeyer/palenight.vim", -- Color scheme
   "ellisonleao/gruvbox.nvim",
   "junegunn/fzf",
@@ -42,7 +47,6 @@ return {
   "vim-airline/vim-airline",      -- Nice status line
   "williamboman/mason-lspconfig.nvim",
   "williamboman/mason.nvim",
-  "wookayin/semshi",
   "zaldih/themery.nvim",
   "zhou13/vim-easyescape",        -- Map jk and kj to <ESC>
  }
