@@ -1,9 +1,13 @@
 require("mason").setup({})
 require("mason-lspconfig").setup({
     ensure_installed = {
+      "bashls",
+      "docker_compose_language_service",
+      "dockerls",
+      "jsonls",
       "lua_ls",
       "pyright",
-      "jsonls",
+      "spectral",
       "yamlls",
     }
   })
