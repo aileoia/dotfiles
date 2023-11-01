@@ -4,6 +4,7 @@ require("mason-lspconfig").setup({
       "bashls",
       "docker_compose_language_service",
       "dockerls",
+      "groovyls",
       "jsonls",
       "lua_ls",
       "pyright",
