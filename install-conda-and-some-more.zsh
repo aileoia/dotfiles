@@ -8,6 +8,10 @@ rm Miniconda3-latest-Linux-x86_64.sh
 source zshrc
 
 pip install --user pipx pynvim jedi
+
+conda install -y nodejs
+npm install -g neovim
+
 pipx install black
 pipx install dvc"[all]"
 pipx install flake8
