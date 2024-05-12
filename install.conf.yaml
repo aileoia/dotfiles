@@ -10,13 +10,14 @@
     - command: git submodule update --init --recursive
       description: Installing submodules
 - link:
+    # yamllint disable rule:line-length
     ~/.antigen: submodules/antigen
     ~/.config/feh/themes: config/feh/themes
     ~/.config/i3/config: config/i3.config
     ~/.config/i3blocks.conf: config/i3blocks.conf
     ~/.config/nvim/:
-        path: config/nvim/*
-        glob: true
+      path: config/nvim/*
+      glob: true
     ~/.config/ranger/rc.conf: config/ranger/rc.conf
     ~/.config/regolith2/i3/config.d/40_default-style: config/regolith2/i3/config.d/40_default-style
     ~/.gitignore:
@@ -32,11 +33,5 @@
           echo "which zsh > /dev/null  && exec zsh" >> ~/.bashrc
         fi
       description: Append 'exec zsh' to bashrc
-      # yamllint disable rule:line-length
-    - command: |
-        rm ~/.local/bin/nvim
-        wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage -O ~/.local/bin/nvim
-        chmod +x ~/.local/bin/nvim
-      description: Download and reinstall nvim
     - command: vim +PlugInstall +qall
       description: Install vim plugins
