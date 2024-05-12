@@ -1,9 +1,9 @@
 # Installs conda and additionnal python packages.
 
 # Download an install miniconda
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-$(uname -m).sh -O miniconda.sh
-sh miniconda.sh -b
-rm miniconda.sh
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-$(uname -m).sh -O miniforge.sh
+sh miniforge.sh -b
+rm miniforge.sh
 
 source zshrc
 
