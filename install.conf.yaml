@@ -22,6 +22,8 @@
     ~/.config/regolith2/i3/config.d/40_default-style: config/regolith2/i3/config.d/40_default-style
     ~/.gitignore:
     ~/.local/share/nvim/site/autoload/plug.vim: submodules/vim-plug/plug.vim
+    ~/.local/bin/npm: ~/miniforge3/bin/npm
+    ~/.local/bin/node: ~/miniforge3/bin/node
     ~/.p10k.zsh:
     ~/.vim/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.vimrc:
