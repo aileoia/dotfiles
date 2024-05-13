@@ -38,4 +38,4 @@ require("keymap") -- key mappings
 require("autocmd") -- auto commands
 
 
-vim.g.python3_host_prog = "~/miniconda3/bin/python3"
+vim.g.python3_host_prog = "~/miniforge3/bin/python3"
