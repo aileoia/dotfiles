@@ -3,7 +3,7 @@
     link:
       relink: true
       create: true
-- clean: ['~']
+- clean: ["~"]
 - create:
     - ~/.local/bin
 - shell:
@@ -19,7 +19,7 @@
       path: config/nvim/*
       glob: true
     ~/.config/ranger/rc.conf: config/ranger/rc.conf
-    ~/.config/regolith2/i3/config.d/40_default-style: config/regolith2/i3/config.d/40_default-style
+    ~/.config/regolith3/i3/config.d/40_default-style: config/regolith3/i3/config.d/40_default-style
     ~/.gitignore:
     ~/.local/share/nvim/site/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.local/bin/npm: ~/miniforge3/bin/npm
