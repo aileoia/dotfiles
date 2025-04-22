@@ -2,7 +2,7 @@
 
 if [ $(uname -m) = "x86_64" ]
 then
-  NVIM_DL_LINK=https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+  NVIM_DL_LINK=https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.appimage
 elif [ $(uname -m) = "aarch64" ]
 then
   NVIM_DL_LINK=https://github.com/matsuu/neovim-aarch64-appimage/releases/download/v0.9.4/nvim-v0.9.4-aarch64.appimage
