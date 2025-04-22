@@ -53,8 +53,6 @@ unset __conda_setup
 alias vim=nvim
 export EDITOR=nvim
 
-eval $(thefuck --alias)
-
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
