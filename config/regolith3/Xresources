@@ -5,3 +5,4 @@ wm.workspace.01.name: 1: 1 Terminal
 wm.workspace.08.name: 8: 8 Web
 wm.workspace.10.name: 10: Slack
 wm.workspace.19.name: 19: Chat
+wm.program.lock: /usr/bin/i3lock
