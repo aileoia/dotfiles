@@ -32,9 +32,13 @@ return {
         wrap = false, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
-        -- configure global vim variables (vim.g)
-        -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
-        -- This can be found in the `lua/lazy_setup.lua` file
+        -- Prefer uv-managed CPython (install-runtimes.sh) for pynvim / host python.
+        python3_host_prog = (function()
+          if vim.fn.executable "uv" == 1 then
+            local python = vim.fn.systemlist("uv python find")[1]
+            if python and python ~= "" then return python end
+          end
+        end)(),
       },
     },
     -- Mappings can be configured through AstroCore as well.

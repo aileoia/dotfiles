@@ -2,14 +2,17 @@
 
 ---@type LazySpec
 return {
-  -- Debian python3 has no ensurepip; Mason PyPI packages (basedpyright, ruff extras, black, isort, debugpy)
-  -- need a venv-capable interpreter. miniforge is already used for node/npm in this machine's PATH setup.
+  -- Debian python3 has no ensurepip; Mason PyPI packages need a venv-capable
+  -- interpreter. Prefer the uv-managed CPython from install-runtimes.sh.
   {
     "mason-org/mason.nvim",
     opts = function(_, opts)
-      local conda_bin = vim.fn.expand "~/miniforge3/bin"
-      if vim.fn.isdirectory(conda_bin) == 1 then
-        vim.env.PATH = conda_bin .. ":" .. vim.env.PATH
+      if vim.fn.executable "uv" == 1 then
+        local python = vim.fn.systemlist("uv python find")[1]
+        if python and python ~= "" and vim.fn.filereadable(python) == 1 then
+          local bin = vim.fn.fnamemodify(python, ":h")
+          vim.env.PATH = bin .. ":" .. vim.env.PATH
+        end
       end
       return opts
     end,
