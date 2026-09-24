@@ -1,84 +1,84 @@
-# My dotfiles
+# Dotfiles
 
-These are my configuration files for
+Personal Linux configuration for a zsh + Neovim + Regolith/i3 workstation.
 
-  * vim
-  * zsh
-  * i3
-  * more ...
+Dotbot links files from this repo into `$HOME`. The mapping lives in
+`install.conf.yaml`.
 
-The basic idea is to link the files in this repository to the corresponding
-configuration files (e.g. `~/.vimrc -> vimrc`).  To see which files get linked,
-checkout `install.conf.yaml`.
+## Layout
 
-## Getting started
+| Path | Role |
+| --- | --- |
+| `zshrc`, `p10k.zsh` | zsh, Antigen plugins, Powerlevel10k |
+| `config/nvim/` | AstroNvim v6 user config |
+| `vimrc` | Classic Vim (vim-plug), kept as a fallback |
+| `config/i3.config`, `config/i3blocks.conf` | standalone i3 |
+| `config/regolith3/` | Regolith 3 i3 extras and Xresources |
+| `config/ranger/`, `config/feh/` | file manager and image viewer |
+| `gitignore` | global git ignore |
+| `install-conda-and-some-more.zsh` | optional Miniforge, Neovim AppImage, pipx tools |
 
-### Requirements
+Vendored as git submodules: [Dotbot](https://github.com/anishathalye/dotbot),
+[Antigen](https://github.com/zsh-users/antigen),
+[vim-plug](https://github.com/junegunn/vim-plug).
 
-The following commands are assumed to be available for a successful installation:
+## Install
 
-* `wget` to download `nvim`
-* `pip3` to install dependencies needed for `nvim` and `vim`
-* `fuse` to be able to run the `nvim` AppImage
-* `vim` so that the vim plugins can be installed
-
-If these commands are missing, then the install script will output an error,
-but nevertheless the config files will be installed.
-
-It is highly recommended to install `zsh` even though no error will be shown if
-it is missing.
-
-### Installation
-
-Clone
 ```bash
-git clone https://github.com/aileoia/dotfiles ~/.dotfiles
-```
-
-To install, enter:
-```bash
+git clone https://github.com/aileoia/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install
 ```
 
-The zsh theme installed by default is
-[powerlevel10k](https://github.com/romkatv/powerlevel10k) for which it is
-recommended to install the [Meslo Nerd
-Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k).
+`./install` initializes submodules, creates `~/.local/bin`, symlinks configs,
+appends `exec zsh` to `~/.bashrc` if missing, and runs Vim `:PlugInstall`.
 
-### I just want part of it
+Recommended on the host:
 
-If you are in a hurry, just have a look at look at `install.conf.yaml`, it is
-almost self-explained.  If you have a bit more time, checkout
-[dotbot](https://github.com/anishathalye/dotbot), which is the bootstrapping
-library used here.  It is also shipped as a submodule so that the installation
-of the these files can happen without having to install it manually.
+- `zsh` (the install still runs without it)
+- a [Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) for Powerlevel10k
+- Neovim 0.12+ on `PATH` (or `~/.local/bin`) for the AstroNvim config
+- `direnv` if you want the hook in `zshrc`
 
-## What's inside
+Antigen bundles install on the first zsh session. AstroNvim plugins and Mason
+language servers install on the first `nvim` start.
 
-### `zsh`
+### Optional Python / Neovim bootstrap
 
-The `zsh` shell is defined as default shell by appending `exec zsh` at the
-bottom of the `~/.bashrc` (see `install.conf.yaml`).
-
-The zsh plugins are managed by [antigen](https://github.com/zsh-users/antigen),
-which is provided as a git submodule.  _Note that the plugins get installed
-only the first time you start a `zsh` shell._
-
-The theme used is [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-already configured for my taste.  To reconfigure it, run `p10k configure` or
-just remove the file `p10k.zsh`.  Note that for this theme to work well, the
-Meslo Nerd Font is recommended, see above.
-
-Checkout `zshrc` to see which plugins are activated, they are defined right
-after `bundle` (any recommendation is welcome!).
-
-## Vim
-
-Vim plugins are manage by [vim-plug](https://github.com/junegunn/vim-plug)
-which is shipped as a submodule.  To install all the plugins, run
-`:PlugInstall` inside vim, or
 ```bash
-vim +PlugInstall
+./install-conda-and-some-more.zsh
 ```
-from a terminal.
+
+That script is separate from Dotbot. It downloads a Neovim AppImage, installs
+Miniforge, and pipx-installs tools such as black, ruff, pre-commit, and ranger.
+
+### Partial install
+
+Edit `install.conf.yaml` and rerun `./install`. Extra arguments are passed
+through to Dotbot.
+
+## Shell
+
+- Theme: Powerlevel10k (`p10k configure` or edit `p10k.zsh`)
+- Plugins: git, vi-mode, autosuggestions, history-substring-search,
+  syntax-highlighting, conda completion, you-should-use
+- Conda hook assumes `$HOME/miniforge3`
+- Extra env: `$HOME/.environment` if present
+- Aliases: `vim` → `nvim`, `gl` / `glr` for fast-forward / rebase pulls
+
+## Neovim
+
+AstroNvim v6 with community packs for Docker, Helm, JSON, Lua, Markdown,
+Python (ruff), TOML, and YAML. Format on save is on. User plugin examples in
+`config/nvim/lua/plugins/user.lua` and `polish.lua` are still disabled.
+
+The classic `vimrc` remains for Vim-only machines.
+
+## Desktop
+
+Regolith 3 workspaces (terminal, web, Slack, chat) and i3lock. Standalone i3
+config is still linked for non-Regolith boxes.
+
+## License
+
+LGPL-3.0 (see `LICENSE`).
