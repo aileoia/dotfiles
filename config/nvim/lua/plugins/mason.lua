@@ -1,38 +1,41 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- Customize Mason plugins
+-- Customize Mason
 
 ---@type LazySpec
 return {
-  -- use mason-lspconfig to configure LSP installations
+  -- Debian python3 has no ensurepip; Mason PyPI packages (basedpyright, ruff extras, black, isort, debugpy)
+  -- need a venv-capable interpreter. miniforge is already used for node/npm in this machine's PATH setup.
   {
-    "williamboman/mason-lspconfig.nvim",
-    -- overrides `require("mason-lspconfig").setup(...)`
-    opts = {
-      ensure_installed = {
-        "lua_ls",
-        -- add more arguments for adding more language servers
-      },
-    },
+    "mason-org/mason.nvim",
+    opts = function(_, opts)
+      local conda_bin = vim.fn.expand "~/miniforge3/bin"
+      if vim.fn.isdirectory(conda_bin) == 1 then
+        vim.env.PATH = conda_bin .. ":" .. vim.env.PATH
+      end
+      return opts
+    end,
   },
-  -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
+  -- use mason-tool-installer for automatically installing Mason packages
   {
-    "jay-babu/mason-null-ls.nvim",
-    -- overrides `require("mason-null-ls").setup(...)`
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    -- overrides `require("mason-tool-installer").setup(...)`
     opts = {
+      -- Make sure to use the names found in `:Mason`
       ensure_installed = {
+        "lua-language-server",
+        "basedpyright",
+        "ruff",
+        "debugpy",
+        "black",
+        "isort",
+        "docker-language-server",
+        "hadolint",
+        "json-lsp",
+        "marksman",
+        "taplo",
+        "yaml-language-server",
+        "helm-ls",
         "stylua",
-        -- add more arguments for adding more null-ls sources
-      },
-    },
-  },
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    -- overrides `require("mason-nvim-dap").setup(...)`
-    opts = {
-      ensure_installed = {
-        "python",
-        -- add more arguments for adding more debuggers
+        "selene",
       },
     },
   },
