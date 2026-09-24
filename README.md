@@ -16,7 +16,7 @@ Dotbot links files from this repo into `$HOME`. The mapping lives in
 | `config/regolith3/` | Regolith 3 i3 extras and Xresources |
 | `config/ranger/`, `config/feh/` | file manager and image viewer |
 | `gitignore` | global git ignore |
-| `install-conda-and-some-more.zsh` | optional Miniforge, Neovim AppImage, pipx tools |
+| `install-runtimes.sh` | optional Neovim, Node LTS, uv Python, CLI tools |
 
 Vendored as git submodules: [Dotbot](https://github.com/anishathalye/dotbot),
 [Antigen](https://github.com/zsh-users/antigen),
@@ -43,14 +43,24 @@ Recommended on the host:
 Antigen bundles install on the first zsh session. AstroNvim plugins and Mason
 language servers install on the first `nvim` start.
 
-### Optional Python / Neovim bootstrap
+### Optional runtimes (Neovim, Node, Python)
+
+Separate from Dotbot. Formerly `install-conda-and-some-more.zsh`. Does not
+install Miniforge; conda remains optional if you want it later.
 
 ```bash
-./install-conda-and-some-more.zsh
+bash install-runtimes.sh
 ```
 
-That script is separate from Dotbot. It downloads a Neovim AppImage, installs
-Miniforge, and pipx-installs tools such as black, ruff, pre-commit, and ranger.
+Installs into `~/.local`:
+
+- Neovim 0.12+ from the official GitHub tarball (not an AppImage)
+- Node.js LTS, plus the `neovim` npm package
+- [uv](https://docs.astral.sh/uv/) with CPython 3.12 and `pynvim`
+- `uv tool` CLIs: ruff, pre-commit, ranger
+
+Set `EXTRAS=1` to also install dvc and tox. Re-running skips pieces that are
+already present.
 
 ### Partial install
 
@@ -62,7 +72,7 @@ through to Dotbot.
 - Theme: Powerlevel10k (`p10k configure` or edit `p10k.zsh`)
 - Plugins: git, vi-mode, autosuggestions, history-substring-search,
   syntax-highlighting, conda completion, you-should-use
-- Conda hook assumes `$HOME/miniforge3`
+- Conda hook is a no-op unless `$HOME/miniforge3` exists (not installed by this repo)
 - Extra env: `$HOME/.environment` if present
 - Aliases: `vim` → `nvim`, `gl` / `glr` for fast-forward / rebase pulls
 
@@ -70,7 +80,11 @@ through to Dotbot.
 
 AstroNvim v6 with community packs for Docker, Helm, JSON, Lua, Markdown,
 Python (ruff), TOML, and YAML. Format on save is on. User plugin examples in
-`config/nvim/lua/plugins/user.lua` and `polish.lua` are still disabled.
+`config/nvim/lua/plugins/user.lua` and `polish.lua` are still disabled. Mason
+and `python3_host_prog` prefer a uv-managed CPython when `uv` is on `PATH`.
+
+Comparison of Neovim distributions (AstroNvim, LazyVim, omarchy-nvim,
+and others): [docs/neovim-distributions.md](docs/neovim-distributions.md).
 
 The classic `vimrc` remains for Vim-only machines.
 
