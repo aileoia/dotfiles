@@ -1,0 +1,41 @@
+---
+description: Commit after every logical change with small messages
+alwaysApply: true
+---
+
+# Git commits
+
+After each logical change, create a commit immediately. Do not wait for the
+user to ask. Do not batch unrelated files into one commit.
+
+## Size
+
+One concern per commit. If a subject would need `;` or the word `and`,
+split into several commits instead. Do not use `;` or `and` in the subject
+or the body.
+
+Keep Conventional Commits: `<type>(<scope>): <description>` in lowercase,
+imperative, no trailing period. Prefer no body. If a body is needed, do not
+use `;` or `and` there either.
+
+```text
+# BAD
+feat(nvim): prefer uv python for mason and host
+docs: rewrite readme; document install
+
+# GOOD
+feat(nvim): point mason at uv python
+feat(nvim): set python3_host_prog from uv
+docs: rewrite readme for current stack
+```
+
+## Amend
+
+`git commit --amend` is allowed only when all of these hold:
+
+- The commit has not been pushed to a remote
+- `HEAD` was created in this session
+- The follow-up is the same logical change (typo, missed file, hook edit)
+
+If a commit was rejected by a hook, fix it in a **new** commit. Do not amend.
+Do not skip hooks. Do not amend commits you did not create.
