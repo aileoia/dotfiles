@@ -1,0 +1,31 @@
+---
+description: Use long-form flags in shell scripts
+globs: "**/*.{sh,bash,zsh},install"
+alwaysApply: false
+---
+
+# Long-form shell options
+
+In every shell script, write `set` options and command flags in long form.
+Do not use clustered short flags (`set -euo pipefail`, `curl -fsSL`, `rm -rf`).
+
+This repo targets GNU/Linux, so prefer GNU long options (`mkdir --parents`,
+`mktemp --directory`). Prefer a program's long CLI names when they exist.
+
+```bash
+# BAD
+set -euo pipefail
+mkdir -p "$HOME/.local/bin"
+curl -fsSL --retry 3 -o "$dest" "$url"
+rm -rf "$tmpdir"
+ln -sfn "$src" "$dst"
+
+# GOOD
+set -o errexit -o nounset -o pipefail
+mkdir --parents "$HOME/.local/bin"
+curl --fail --silent --show-error --location --retry 3 --output "$dest" "$url"
+rm --recursive --force "$tmpdir"
+ln --symbolic --force --no-dereference "$src" "$dst"
+```
+
+Redirections (`>/dev/null`) and `command -v` are not flags; leave them as-is.
