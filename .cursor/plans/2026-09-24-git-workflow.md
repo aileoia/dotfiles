@@ -7,17 +7,17 @@ land on master by fast-forward only.
 
 ## Approach
 
-Always-on Cursor rules, AGENTS.md, plus `merge-to-master.sh`.
+All of this lives in `AGENTS.md`. No Cursor `.mdc` files. No merge script.
 
 ## Steps
 
-- [x] Add `.cursor/rules/git-commits.mdc`
-- [x] Add `.cursor/rules/git-merge-master.mdc`
-- [x] Add `merge-to-master.sh`
-- [x] Update `AGENTS.md`
+- [x] Put commit, merge, shell, plan rules in `AGENTS.md`
+- [x] Remove `.cursor/rules/*.mdc`
+- [x] Remove `merge-to-master.sh`
 
 ## Key decisions
 
 - Amend unpushed HEAD for the same change only.
 - No `;` or the word `and` in commit subjects or bodies.
 - Rebase the topic onto master when fast-forward is not possible.
+- Fast-forward is a documented git sequence, not a bash wrapper.
