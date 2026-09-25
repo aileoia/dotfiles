@@ -5,7 +5,7 @@
 - At the start of every user prompt, inspect the current branch and working
   tree status.
 - Before starting a new concern, ensure the previous topic branch is clean and
-  landed on `master`, then create a fresh topic branch.
+  landed on `main`, then create a fresh topic branch.
 - Preserve unrelated user changes when landing or switching branches.
 
 ## Commit convention
@@ -46,23 +46,23 @@ docs: document commit convention
 Bad subjects: `feat(nvim): add helm and docker packs`,
 `docs: rewrite readme; document install`.
 
-## Merge to master
+## Merge to main
 
-Land topic branches with a fast-forward only merge onto `master`. Never
-`git merge --no-ff`. Never create a merge commit on `master`. Do not push
-`master` unless the user asks.
+Land topic branches with a fast-forward only merge onto `main`. Never
+`git merge --no-ff`. Never create a merge commit on `main`. Do not push
+`main` unless the user asks.
 
 From a clean topic branch:
 
 ```bash
 git fetch origin
-git merge-base --is-ancestor master HEAD
-git switch master
+git merge-base --is-ancestor main HEAD
+git switch main
 git merge --ff-only <topic-branch>
 ```
 
-If `master` is not an ancestor of `HEAD`, rebase the topic onto `master`, then
-fast-forward. Do not merge `master` into the topic as the landing step.
+If `main` is not an ancestor of `HEAD`, rebase the topic onto `main`, then
+fast-forward. Do not merge `main` into the topic as the landing step.
 
 ## Shell scripts
 
