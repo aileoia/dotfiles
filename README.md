@@ -99,6 +99,8 @@ Snacks document images are enabled. Mermaid fences use the Mermaid Treesitter
 parser, `mmdc`, and Kitty's graphics protocol for inline previews. `:checkhealth`
 may still list missing Go, Rust, Ruby, PHP, Julia, and other language runtimes;
 those are Mason capability checks, not requirements for the configured packs.
+See the [Kitty and Mermaid cheat sheet](docs/kitty-cheatsheet.md) for shortcuts
+and preview troubleshooting.
 
 Comparison of Neovim distributions (AstroNvim, LazyVim, omarchy-nvim,
 and others): [docs/neovim-distributions.md](docs/neovim-distributions.md).
