@@ -17,6 +17,9 @@ return {
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
     },
+    treesitter = {
+      ensure_installed = { "mermaid", "regex" },
+    },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
       virtual_text = true,
@@ -32,10 +35,14 @@ return {
         wrap = false, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
-        -- Prefer uv-managed CPython (install-runtimes.sh) for pynvim / host python.
+        loaded_perl_provider = 0,
+        loaded_ruby_provider = 0,
+        -- Prefer the dedicated pynvim environment from install-runtimes.sh.
         python3_host_prog = (function()
+          local python = vim.fn.expand "~/.local/share/nvim/python/bin/python"
+          if vim.fn.executable(python) == 1 then return python end
           if vim.fn.executable "uv" == 1 then
-            local python = vim.fn.systemlist("uv python find")[1]
+            python = vim.fn.systemlist("uv python find")[1]
             if python and python ~= "" then return python end
           end
         end)(),

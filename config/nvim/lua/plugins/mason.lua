@@ -7,12 +7,13 @@ return {
   {
     "mason-org/mason.nvim",
     opts = function(_, opts)
-      if vim.fn.executable "uv" == 1 then
-        local python = vim.fn.systemlist("uv python find")[1]
-        if python and python ~= "" and vim.fn.filereadable(python) == 1 then
-          local bin = vim.fn.fnamemodify(python, ":h")
-          vim.env.PATH = bin .. ":" .. vim.env.PATH
-        end
+      local python = vim.fn.expand "~/.local/share/nvim/python/bin/python"
+      if vim.fn.executable(python) ~= 1 and vim.fn.executable "uv" == 1 then
+        python = vim.fn.systemlist("uv python find")[1]
+      end
+      if python and python ~= "" and vim.fn.filereadable(python) == 1 then
+        local bin = vim.fn.fnamemodify(python, ":h")
+        vim.env.PATH = bin .. ":" .. vim.env.PATH
       end
       return opts
     end,
