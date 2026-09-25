@@ -19,7 +19,7 @@
       path: config/nvim/*
       glob: true
     ~/.config/ranger/rc.conf: config/ranger/rc.conf
-    ~/.config/regolith3/i3/config.d/40_default-style: config/regolith3/i3/config.d/40_default-style
+    ~/.config/regolith3/i3/config.d/90_app-workspaces: config/regolith3/i3/config.d/90_app-workspaces
     ~/.config/regolith3/Xresources: config/regolith3/Xresources
     ~/.gitignore:
     ~/.local/share/nvim/site/autoload/plug.vim: submodules/vim-plug/plug.vim

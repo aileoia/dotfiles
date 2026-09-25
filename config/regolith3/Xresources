@@ -1,8 +1,9 @@
-regolith.wallpaper.file: /home/leo/.local/share/backgrounds/2025-04-17-14-17-34-wallpaperlight_2560x1440.png
-regolith.lockscreen.wallpaper.file: /home/leo/.local/share/backgrounds/2025-04-17-14-17-34-wallpaperlight_2560x1440.png
+regolith.wallpaper.file: ~/.local/share/backgrounds/2025-04-17-14-17-34-wallpaperlight_2560x1440.png
+regolith.lockscreen.wallpaper.file: ~/.local/share/backgrounds/2025-04-17-14-17-34-wallpaperlight_2560x1440.png
 
-wm.workspace.01.name: 1: 1 Terminal
-wm.workspace.08.name: 8: 8 Web
+wm.workspace.01.name: 1: Terminal
+wm.workspace.08.name: 8: Web
 wm.workspace.10.name: 10: Slack
 wm.workspace.19.name: 19: Chat
-wm.program.lock: /usr/bin/i3lock
+
+wm.gaps.focus_follows_mouse: yes
