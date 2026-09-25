@@ -23,6 +23,9 @@
     ~/.config/regolith3/Xresources: config/regolith3/Xresources
     ~/.gitignore:
     ~/.local/share/nvim/site/autoload/plug.vim: submodules/vim-plug/plug.vim
+    # `zg` appends here; neovim resolves this path on its own, so no `spellfile`
+    # setting is needed. The compiled `.spl` stays next to it, outside the repo.
+    ~/.local/share/nvim/site/spell/en.utf-8.add: config/nvim/spell/en.utf-8.add
     ~/.p10k.zsh:
     ~/.vim/autoload/plug.vim: submodules/vim-plug/plug.vim
     ~/.vimrc:
