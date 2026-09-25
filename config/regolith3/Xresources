@@ -1,6 +1,8 @@
 regolith.wallpaper.file: ~/.local/share/backgrounds/2025-04-17-14-17-34-wallpaperlight_2560x1440.png
 regolith.lockscreen.wallpaper.file: ~/.local/share/backgrounds/2025-04-17-14-17-34-wallpaperlight_2560x1440.png
 
+wm.program.terminal: ~/.local/bin/kitty
+
 wm.workspace.01.name: 1: Terminal
 wm.workspace.08.name: 8: Web
 wm.workspace.10.name: 10: Slack
