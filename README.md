@@ -43,24 +43,35 @@ Recommended on the host:
 Antigen bundles install on the first zsh session. AstroNvim plugins and Mason
 language servers install on the first `nvim` start.
 
-### Optional runtimes (Neovim, Node, Python)
+### Optional runtimes (Neovim, Node, Python, CLI tools)
 
 Separate from Dotbot. Formerly `install-conda-and-some-more.zsh`. Does not
 install Miniforge; conda remains optional if you want it later.
 
 ```bash
 bash install-runtimes.sh
+DESKTOP=1 bash install-runtimes.sh
 ```
 
 Installs into `~/.local`:
 
 - Neovim 0.12+ from the official GitHub tarball (not an AppImage)
-- Node.js LTS, plus the `neovim` npm package
-- [uv](https://docs.astral.sh/uv/) with CPython 3.12 and `pynvim`
+- Node.js 22.13+ LTS, plus the `neovim` npm package
+- [uv](https://docs.astral.sh/uv/) with CPython 3.12 and a dedicated
+  `~/.local/share/nvim/python` environment containing `pip` and `pynvim`
+- Neovim health tools from their official releases: lazygit, fd, gdu, and btm
 - `uv tool` CLIs: ruff, pre-commit, ranger
 
 Set `EXTRAS=1` to also install dvc and tox. Re-running skips pieces that are
 already present.
+
+Set `DESKTOP=1` to install
+[`@mermaid-js/mermaid-cli`](https://github.com/mermaid-js/mermaid-cli) and
+[Kitty](https://sw.kovidgoyal.net/kitty/) for inline Mermaid diagrams through
+Snacks. The script verifies a real `mmdc` render. On Linux systems where
+AppArmor blocks Chromium's user-namespace sandbox, it creates a local
+`--no-sandbox` wrapper; only render trusted Markdown in that mode. Regolith and
+standalone i3 launch the user-local Kitty from `Mod+Enter`.
 
 ### Partial install
 
@@ -81,7 +92,13 @@ through to Dotbot.
 AstroNvim v6 with community packs for Docker, Helm, JSON, Lua, Markdown,
 Python (ruff), TOML, and YAML. Format on save is on. User plugin examples in
 `config/nvim/lua/plugins/user.lua` and `polish.lua` are still disabled. Mason
-and `python3_host_prog` prefer a uv-managed CPython when `uv` is on `PATH`.
+and `python3_host_prog` use the dedicated uv environment created by
+`install-runtimes.sh`.
+
+Snacks document images are enabled. Mermaid fences use the Mermaid Treesitter
+parser, `mmdc`, and Kitty's graphics protocol for inline previews. `:checkhealth`
+may still list missing Go, Rust, Ruby, PHP, Julia, and other language runtimes;
+those are Mason capability checks, not requirements for the configured packs.
 
 Comparison of Neovim distributions (AstroNvim, LazyVim, omarchy-nvim,
 and others): [docs/neovim-distributions.md](docs/neovim-distributions.md).
