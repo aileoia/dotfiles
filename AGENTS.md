@@ -1,5 +1,13 @@
 # Agent Guidelines
 
+## Branch hygiene
+
+- At the start of every user prompt, inspect the current branch and working
+  tree status.
+- Before starting a new concern, ensure the previous topic branch is clean and
+  landed on `master`, then create a fresh topic branch.
+- Preserve unrelated user changes when landing or switching branches.
+
 ## Commit convention
 
 This repository uses Conventional Commits:
