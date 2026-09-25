@@ -1,6 +1,11 @@
 -- Wrap prose at `textwidth` while typing, but leave code blocks, tables,
 -- mermaid diagrams, headings and frontmatter alone.
 
+-- The bundled markdown queries capture `(inline) @spell` and mark code spans,
+-- link urls and entity references `@nospell`, so only prose is checked.
+vim.opt_local.spell = true
+vim.opt_local.spelllang = "en"
+
 local width = 88
 local reflow_paragraphs = false -- `a`: reformat the whole paragraph on every edit
 
