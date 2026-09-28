@@ -26,9 +26,6 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 
-# Add local binaries
-export PATH=$HOME/.local/bin:$PATH
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$($HOME/miniforge3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
@@ -43,6 +40,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Prefer user-installed tools over similarly named Conda executables.
+export PATH="$HOME/.local/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
