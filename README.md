@@ -102,6 +102,10 @@ those are Mason capability checks, not requirements for the configured packs.
 See the [Kitty and Mermaid cheat sheet](docs/kitty-cheatsheet.md) for shortcuts
 and preview troubleshooting.
 
+Obsidian-style wiki links are supported in the personal notes vault. See the
+[Obsidian.nvim mini cheat sheet](docs/obsidian-nvim-cheatsheet.md) for commands
+and shortcuts.
+
 Comparison of Neovim distributions (AstroNvim, LazyVim, omarchy-nvim,
 and others): [docs/neovim-distributions.md](docs/neovim-distributions.md).
 
