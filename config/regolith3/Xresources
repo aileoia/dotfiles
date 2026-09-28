@@ -4,6 +4,7 @@ regolith.lockscreen.wallpaper.file: ~/.local/share/backgrounds/2025-04-17-14-17-
 wm.program.terminal: ~/.local/bin/kitty
 
 wm.workspace.01.name: 1: Terminal
+wm.workspace.02.name: 2: Cursor
 wm.workspace.08.name: 8: Web
 wm.workspace.10.name: 10: Slack
 wm.workspace.19.name: 19: Chat
