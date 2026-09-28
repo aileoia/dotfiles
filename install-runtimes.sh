@@ -272,12 +272,18 @@ install_btm() {
 
 install_mermaid_cli() {
   mermaid_cli="${HOME}/.local/lib/node_modules/@mermaid-js/mermaid-cli/src/cli.js"
+  export PUPPETEER_CACHE_DIR="${HOME}/.cache/puppeteer"
   if [ -f "${mermaid_cli}" ]; then
     log "Mermaid CLI already installed, skipping npm install"
   else
     log "Installing Mermaid CLI into ${HOME}/.local"
     npm install --global --prefix "${HOME}/.local" @mermaid-js/mermaid-cli
   fi
+
+  log "Installing the Chrome Headless Shell required by Mermaid CLI"
+  puppeteer_cli="${HOME}/.local/lib/node_modules/@mermaid-js/mermaid-cli/node_modules/.bin/puppeteer"
+  [ -x "${puppeteer_cli}" ] || die "Mermaid CLI did not install Puppeteer"
+  "${puppeteer_cli}" browsers install chrome-headless-shell
 
   log "Verifying Mermaid rendering"
   tmpdir=$(mktemp --directory)
