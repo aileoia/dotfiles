@@ -1,0 +1,2 @@
+# gnome-screensaver ships neither an autostart entry nor a D-Bus service file.
+exec --no-startup-id gnome-screensaver

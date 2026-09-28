@@ -20,6 +20,7 @@
       path: config/nvim/*
       glob: true
     ~/.config/ranger/rc.conf: config/ranger/rc.conf
+    ~/.config/regolith3/i3/config.d/20_screen-lock: config/regolith3/i3/config.d/20_screen-lock
     ~/.config/regolith3/i3/config.d/90_app-workspaces: config/regolith3/i3/config.d/90_app-workspaces
     ~/.config/regolith3/Xresources: config/regolith3/Xresources
     ~/.gitignore:
