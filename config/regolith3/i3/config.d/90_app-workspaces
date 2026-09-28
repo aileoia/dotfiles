@@ -1,4 +1,4 @@
 # Assign apps to named workspaces
 assign [class="(?i)^slack$"] $ws10
 assign [class="^dino$"] $ws19
-assign [class="^Signal$"] $ws19
+assign [class="^signal-desktop$"] $ws19
