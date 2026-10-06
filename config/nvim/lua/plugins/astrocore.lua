@@ -71,12 +71,43 @@ return {
 
         ["<Leader>id"] = { 'a<C-R>=strftime("%F")<CR><Esc>', desc = "Insert date" },
 
+        ["gs"] = {
+          function()
+            require "sentences"
+            vim.go.operatorfunc = "v:lua.sentence_split_operator"
+            return "g@"
+          end,
+          expr = true,
+          desc = "Split sentences",
+        },
+        ["gss"] = {
+          function()
+            require "sentences"
+            vim.go.operatorfunc = "v:lua.sentence_split_operator"
+            -- The typed count is applied to this motion, as with `gqq`.
+            return "g@_"
+          end,
+          expr = true,
+          desc = "Split sentences",
+        },
+
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      x = {
+        ["gs"] = {
+          function()
+            require "sentences"
+            vim.go.operatorfunc = "v:lua.sentence_split_operator"
+            return "g@"
+          end,
+          expr = true,
+          desc = "Split sentences",
+        },
       },
     },
   },
